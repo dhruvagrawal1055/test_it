@@ -13,7 +13,7 @@ const SignUpPage=()=> {
     const navigate = useNavigate();
     const register = (e) => {
         e.preventDefault();
-        axios.post("http://52.172.10.66:3001/register", {
+        axios.post("https://52.172.10.66:3001/register", {
             email: email,
             name: name,
             password: password
