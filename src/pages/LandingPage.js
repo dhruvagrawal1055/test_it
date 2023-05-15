@@ -15,12 +15,12 @@ export default function LandingPage() {
         <header style={ HeaderStyle }>
             <h1 className="main-title text-center" style={{color :"#55f10d", fontSize:"20sp"}}>
                 <TypeWriterEffect
-                    textStyle={{ fontFamily: 'Rubrick' }}
+                    textStyle={{ fontFamily: 'Comic-Sans' }}
                     startDelay={800}
                     cursorColor="red"
                     fontSize="100rem"
                     text="Welcome..."
-                    typeSpeed={80}
+                    typeSpeed={100}
                     scrollArea={document}
                 ></TypeWriterEffect></h1>
             {/* {mount?setTimeout(() => { console.log("hello") }, 1000): setmount(true)} */}

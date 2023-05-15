@@ -52,7 +52,11 @@ body {
 }
 
 .m-5-auto {
-    margin: 5rem auto
+    margin: 5rem auto;
+    display:flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
 }
 
 .primary-button {
@@ -85,10 +89,10 @@ body {
 }
 .main-title {
     padding-top: 10rem;
-    font-size: 20sp;
+    /*font-size: 20sp;*/
     /* font-family: 'Fascinate', cursive; */
     text-transform: uppercase;
-    color: neon;
+    /*color: neon;*/
 }
 
 .main-para {

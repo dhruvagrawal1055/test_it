@@ -3,22 +3,31 @@ import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import axios, { Axios } from 'axios'
 import "../App.css"
+import Navigate from 'react-router-dom'
+import {useNavigate} from 'react-router-dom'
+// import{useHistory} from "react-router-dom";
+
 export default function SignInPage() {
     const [email, setemail] = useState()
     const [username, setname] = useState()
     const [password, setpassword] = useState()
     const [loginStatus, setloginState] = useState()
+    const naviagte = useNavigate();
     const [registerStatus, setregisterState] = useState()
     const Login = (e) => {
         e.preventDefault();
+        // const history = useHistory();
         axios.post("http://localhost:3001/login", {
             email: email,
             name: username,
             password: password
         }).then((response) => {
-            if (response.data.message) {
+            console.log(response)
+            if (response) {
                 setloginState(response.data.message)
-                console.log(response.data.message);
+                console.log(response.data[0].Email);
+                // history.push('/Welcome')
+                naviagte('/Welcome');
             }
             else {
                 setloginState("Account created successfully!")

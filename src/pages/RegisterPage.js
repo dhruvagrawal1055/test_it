@@ -2,13 +2,15 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import axios, { Axios } from 'axios'
+import {useNavigate} from "react-router-dom";
 import '../App.css'
-export default function SignUpPage() {
+const SignUpPage=()=> {
     const [email, setemail] = useState()
     const [name, setname] = useState()
     const [password, setpassword] = useState()
     const [loginStatus, setloginState] = useState()
     const [registerStatus, setregisterState] = useState()
+    const navigate = useNavigate();
     const register = (e) => {
         e.preventDefault();
         axios.post("http://localhost:3001/register", {
@@ -17,14 +19,16 @@ export default function SignUpPage() {
             password: password
         }).then((response) => {
             console.log(response);
-            if (response.data.message) {
-                setloginState(response.data.message)
-
+            if (response.status===200) {
+                // setloginState(response.data.message)
+                setregisterState("Account created successfully!")
+                navigate("/Welcome")
             }
             else {
                 setloginState("Account created successfully!")
             }
-        })
+        }).catch((err) => {
+            console.log(err)})
     }
 
     return (
@@ -58,3 +62,4 @@ export default function SignUpPage() {
     )
 
 }
+export default SignUpPage;
