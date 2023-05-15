@@ -18,6 +18,13 @@ var con=mysql.createConnection(
         port: 3306
     }
 );
+// var con = mysql.createConnection({
+//     host: "localhost",
+//     user: "root",
+//     password: "",
+//     database: "test1",
+//     port: 4306
+// });
 app.post('/register', (req, res) => {
     const email = req.body.email;
     const password = req.body.password;
@@ -43,6 +50,7 @@ app.post('/login', (req, res) => {
     const password = req.body.password.toString();
     const sql = `SELECT * FROM users WHERE (Email = '${email}' OR Name = '${email}') AND Password = '${password}'`
     con.query(sql, (err, result) => {
+        console.log(result)
         if (err) {
             res.send(err);
         }

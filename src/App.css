@@ -217,3 +217,105 @@ form span {
 .home-page-title {
     color: #222
 }
+
+
+
+
+/*Login Page
+    and
+RegisterPage*/
+
+.loginOuterDiv{
+    display:flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    display: flex;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url('D:\Elitmus\test_it\src\images\cave-clipart-animation-2.gif');
+    min-height: 100vh;
+
+}
+
+.loginInnerDiv{
+  margin: auto;
+  display:flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  display: flex;
+  background-color: rgb(115, 85, 154);
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.form{
+  background-color: rgb(71, 42, 108);
+  border-radius: 30px;
+  border: none;
+  color: white;
+}
+
+
+.form-input{
+  margin: 5px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid black;
+}
+
+#login_btn{
+  display: block;
+    width: 100%;
+    padding: .5rem;
+    border-radius: 20px;
+    background: #222;
+    color: #fff;
+    border-radius: 10px;
+    border: 1px solid white;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+#form-footer p{
+  justify-content: center;
+  display: flex;
+  color: white;
+  font-size: 20px;
+}
+
+.forgot-link{
+  color: #fff;
+}
+
+.linkMove{
+  margin-bottom: 10px;
+  color: rgb(0, 0, 0);
+}
+
+.term-link{
+  color: black;
+}
+
+.form-span{
+  color: white;
+}
+
+
+/* /Registrer page/ */
+
+.regOuterDiv{
+  display:flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  display: flex;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url('https://webstockreview.net/images/cave-clipart-animation-2.gif');
+  min-height: 100vh;
+
+}
