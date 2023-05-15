@@ -17,7 +17,7 @@ export default function SignInPage() {
     const Login = (e) => {
         e.preventDefault();
         // const history = useHistory();
-        axios.post("http://localhost:3001/login", {
+        axios.post("http://52.172.10.66:3001/login", {
             email: email,
             name: username,
             password: password
