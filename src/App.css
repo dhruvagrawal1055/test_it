@@ -234,7 +234,7 @@ RegisterPage*/
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-image: url('D:\Elitmus\test_it\src\images\cave-clipart-animation-2.gif');
+    background-image: url('./images/cave-clipart-animation-2.gif');
     min-height: 100vh;
 
 }
